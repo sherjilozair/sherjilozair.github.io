@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: Sherjil Ozair
 ---
 
 # Sherjil Ozair
