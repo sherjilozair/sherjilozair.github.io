@@ -5,7 +5,7 @@ title: About
 
 # Sherjil Ozair
 
-I'm a graduate student at [MILA](https://mila.umontreal.ca/en/){:target="_blank"}, [University of Montreal](http://www.umontreal.ca/en/){:target="_blank"}, advised by Prof. [Yoshua Bengio](http://www.iro.umontreal.ca/~bengioy/yoshua_en/index.html){:target="_blank"}.
+I'm a graduate student at [MILA](https://mila.umontreal.ca/en/){:target="_blank"}, [University of Montreal](http://www.umontreal.ca/en/){:target="_blank"}, advised by [Prof. Yoshua Bengio](http://www.iro.umontreal.ca/~bengioy/yoshua_en/index.html){:target="_blank"}.
 
 My research interest lies in the intersection of reinforcement learning and generative modeling.
 
