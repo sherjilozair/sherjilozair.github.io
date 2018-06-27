@@ -2,6 +2,7 @@
 layout: default
 ---
 
-## Hello World
+# Sherjil Ozair
 
-Trying a new blogging setup.
+Hi!
+
