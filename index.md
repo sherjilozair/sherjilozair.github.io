@@ -11,4 +11,4 @@ My research interest lies in the intersection of reinforcement learning and gene
 
 In Summer 2018, I'm interning at [Google Brain](https://research.google.com/teams/brain/){:target="_blank"} with the [Robotics group](https://research.google.com/teams/brain/robotics/){:target="_blank"}.
 
-Contacts: [Twitter](https://twitter.com/@sherjilozair), [Github](https://github.com/sherjilozair), [Email](mailto:sherjilozair@gmail.com)
+Contacts: [Twitter](https://twitter.com/@sherjilozair), [Github](https://github.com/sherjilozair), [Email](mailto:sherjilozair@gmail.com).
