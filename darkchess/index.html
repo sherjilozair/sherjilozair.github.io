@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id='game' width="1024" height="1024" style="border:1px solid"></canvas>
+
+<script>
+    let canvas = document.getElementById('game');
+	// get canvas context
+    let ctx = canvas.getContext('2d');
+
+    let images = [];
+
+    let image_names=[
+        "blackBishop",
+        "blackKing",
+        "blackKnight",
+        "blackPawn",
+        "blackQueen",
+        "blackRook",
+        
+        "whiteBishop",
+        "whiteKing",
+        "whiteKnight",
+        "whitePawn",
+        "whiteQueen",
+        "whiteRook",
+    ];
+
+    let piece_sprites = {
+        'blackKing': 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Chess_kdt45.svg',
+        'whiteKing': 'https://upload.wikimedia.org/wikipedia/commons/4/42/Chess_klt45.svg',
+        'blackQueen': 'https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg',
+        'whiteQueen': 'https://upload.wikimedia.org/wikipedia/commons/1/15/Chess_qlt45.svg',
+        'blackRook': 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg',
+        'whiteRook': 'https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg',
+        'blackBishop': 'https://upload.wikimedia.org/wikipedia/commons/9/98/Chess_bdt45.svg',
+        'whiteBishop': 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Chess_blt45.svg',
+        'blackKnight': 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg',
+        'whiteKnight': 'https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg',
+        'blackPawn': 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg',
+        'whitePawn': 'https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg',
+    }
+
+    // let piece_positions = [[]]
+
+    for (var piece in piece_sprites){
+        let image = new Image();
+        image.onload = function () {
+            // draw the image into the canvas
+            draw();
+        }
+        image.src = piece_sprites[piece];
+        images[piece] = image;
+    }
+
+    let square_length = 128;
+    function update(){
+        
+    }
+
+    function draw_piece(piece, rank, file){
+        var file_from_top = 7 - file;
+        ctx.drawImage(images[piece], rank * square_length, file_from_top * square_length, square_length, square_length);
+    }
+
+    function draw(){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var black_color = "#B58964";
+        var white_color = "#F0DAB5";
+        var black_fog_color = "#332E29"
+        var white_fog_color = "#38342C"
+        for(var rank = 0; rank < 8; rank++){
+            for (var file = 0; file < 8; file++){
+                
+                var bit = (rank + file) % 2 == 0;
+                var fog_bit = file < 4;
+                var color = bit? black_color : white_color;
+                var fog_color = bit? black_fog_color: white_fog_color;
+                color = fog_bit? fog_color: color;
+                ctx.fillStyle = color;
+                ctx.fillRect(rank * square_length, file * square_length, square_length, square_length);
+
+            }
+        }
+
+        
+        draw_piece('whiteKing', 0, 0);
+        draw_piece('blackQueen', 1, 0);
+        
+    }
+
+</script>
+</body>
+</html>
