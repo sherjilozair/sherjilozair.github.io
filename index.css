@@ -22,7 +22,7 @@ h1 {
 }
 
 #middle {
-    max-width: 31em;
+    max-width: calc(31em + 25px);
 }
 
 #right {
